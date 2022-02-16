@@ -121,11 +121,7 @@ img {
 
 .connection-icon {
   margin-right: 10px;
-}
-
-.connection-icon:hover,
-.connection-icon:focus {
-  fill: var(--accent-color);
+  /* fill: var(--primary-text-color); */
 }
 
 .connection-item:hover,
