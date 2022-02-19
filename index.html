@@ -29,15 +29,15 @@
                 <li class="connection-item">
                 <a href="mailto:info@devstudio.com" class="link icon-list">
                     <svg class="connection-icon" width="16" height="12">
-                        <use href="./images/svg/symbol-defs.svg#icon-envelope" ></use>
+                        <use href="./images/svg/sprite.svg#icon-envelope" ></use>
                     </svg>
                     info@devstudio.com</a>
                 </li>
 
                 <li class="connection-item">
-                <a href="tel:+380961111111" class="link icon-phone">
+                <a href="tel:+380961111111" class="link icon-list">
                     <svg class="connection-icon" width="10" height="16">
-                        <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
+                        <use href="./images/svg/sprite.svg#icon-smartphone"></use>
                     </svg>
                     +38 096 111 11 11</a>
                 </li>
@@ -48,7 +48,8 @@
     <main>
         <section class="hero section overlay">
                     <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-                    <button type="button" class="button-hero">Замовити послугу</button>
+                    <button type="button" class="button-hero" data-modal-open>Замовити послугу</button>
+                    <div class="backdrop"></div>
         </section>
 
         <section class="section section-preference">
@@ -58,7 +59,7 @@
                     <li class="preference-item">
                         <div class="preference-icon">
                             <svg class="preference-icons">
-                                <use href="./images/svg/icon.svg#icon-antenna"></use>
+                                <use href="./images/svg/sprite.svg#icon-antenna"></use>
                             </svg>
                         </div>
                         <h3 class="preference-title">Увага до деталей</h3>
@@ -67,7 +68,7 @@
                     <li class="preference-item">
                             <div class="preference-icon">
                                 <svg class="preference-icons">
-                                <use href="./images/svg/icon.svg#icon-clock"></use>
+                                <use href="./images/svg/sprite.svg#icon-clock"></use>
                             </svg>
                             </div>
                         <h3 class="preference-title">Пунктуальність</h3>
@@ -76,7 +77,7 @@
                     <li class="preference-item">
                         <div class="preference-icon">
                             <svg class="preference-icons">
-                                <use href="./images/svg/icon.svg#icon-diagram"></use>
+                                <use href="./images/svg/sprite.svg#icon-diagram"></use>
                             </svg>
                         </div>
                         <h3 class="preference-title">Планування</h3>
@@ -85,7 +86,7 @@
                     <li class="preference-item">
                         <div class="preference-icon">
                             <svg class="preference-icons">
-                                <use href="./images/svg/icon.svg#icon-astronaut"></use>
+                                <use href="./images/svg/sprite.svg#icon-astronaut"></use>
                             </svg>
                         </div>
                         <h3 class="preference-title">Сучасні технології</h3>
@@ -100,13 +101,23 @@
             <div class="container">
                 <ul class="list gadgets-list">
                     <li class="gadgets-item">
-                        <img src="./images/laptop.jpg" alt="Ноутбук" width="370" height="294">
+                        <div class="gadgets">
+                            <img src="./images/laptop.jpg" alt="Ноутбук" width="370" height="294">
+                            <p class="gadgets-text">Десктопні додатки</p>
+                        </div>
+                        
                     </li>
                     <li class="gadgets-item">
-                        <img src="./images/phone.jpg" alt="Телефон" width="370" height="294">
+                        <div class="gadgets phone-text">
+                            <img src="./images/phone.jpg" alt="Телефон" width="370" height="294">
+                            <p class="gadgets-text">Мобільні додотки</p>
+                        </div>
                     </li>
                     <li class="gadgets-item">
-                        <img src="./images/tablet.jpg" alt="Планшет" width="370" height="294">
+                        <div class="gadgets tablet-text">
+                            <img src="./images/tablet.jpg" alt="Планшет" width="370" height="294">
+                            <p class="gadgets-text">Дизайнерські рішення</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -128,28 +139,28 @@
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#instagram"></use>
+                                                    <use href="./images/svg/sprite.svg#instagram"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#twitter"></use>
+                                                    <use href="./images/svg/sprite.svg#twitter"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#facebook"></use>
+                                                    <use href="./images/svg/sprite.svg#facebook"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#linkedin"></use>
+                                                    <use href="./images/svg/sprite.svg#linkedin"></use>
                                                 </svg>
                                             </a>
                                         </li>
@@ -169,28 +180,28 @@
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#instagram"></use>
+                                                    <use href="./images/svg/sprite.svg#instagram"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#twitter"></use>
+                                                    <use href="./images/svg/sprite.svg#twitter"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#facebook"></use>
+                                                    <use href="./images/svg/sprite.svg#facebook"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#linkedin"></use>
+                                                    <use href="./images/svg/sprite.svg#linkedin"></use>
                                                 </svg>
                                             </a>
                                         </li>
@@ -211,28 +222,28 @@
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#instagram"></use>
+                                                    <use href="./images/svg/sprite.svg#instagram"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#twitter"></use>
+                                                    <use href="./images/svg/sprite.svg#twitter"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#facebook"></use>
+                                                    <use href="./images/svg/sprite.svg#facebook"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#linkedin"></use>
+                                                    <use href="./images/svg/sprite.svg#linkedin"></use>
                                                 </svg>
                                             </a>
                                         </li>
@@ -253,28 +264,28 @@
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#instagram"></use>
+                                                    <use href="./images/svg/sprite.svg#instagram"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#twitter"></use>
+                                                    <use href="./images/svg/sprite.svg#twitter"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#facebook"></use>
+                                                    <use href="./images/svg/sprite.svg#facebook"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#linkedin"></use>
+                                                    <use href="./images/svg/sprite.svg#linkedin"></use>
                                                 </svg>
                                             </a>
                                         </li>
@@ -289,56 +300,56 @@
         </section>
 
         <section class="section section-customers">
+            <h2 class="section-title">Постійні клієнти</h2>
                 <div class="container">
-                    <h2 class="section-title">Постійні клієнти</h2>
+                    
                 <ul class="list customers">
                     <li>
                         <a class="customer" href="" width="170" height="92">
                             <svg class="icon-customers">
-                                <use href="./images/svg/customers.svg#customers-one"></use>
+                                <use href="./images/svg/sprite.svg#customers-one"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a class="customer" href="" width="170" height="92">
                             <svg class="icon-customers">
-                                <use href="./images/svg/customers.svg#customers-two"></use>
+                                <use href="./images/svg/sprite.svg#customers-two"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a class="customer" href="" width="170" height="92">
                             <svg class="icon-customers">
-                                <use href="./images/svg/customers.svg#customers-three"></use>
+                                <use href="./images/svg/sprite.svg#customers-three"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a class="customer" href="" width="170" height="92">
                             <svg class="icon-customers">
-                                <use href="./images/svg/customers.svg#customers-four"></use>
+                                <use href="./images/svg/sprite.svg#customers-four"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a class="customer" href="" width="170" height="92">
                             <svg class="icon-customers">
-                                <use href="./images/svg/customers.svg#customers-five"></use>
+                                <use href="./images/svg/sprite.svg#customers-five"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a class="customer" href="" width="170" height="92">
                             <svg class="icon-customers">
-                                <use href="./images/svg/customers.svg#customers-six"></use>
+                                <use href="./images/svg/sprite.svg#customers-six"></use>
                             </svg>
                         </a>
                     </li>
                 </ul>
                 </div>
         </section>
-
-
+                  
     </main>
 
     <footer class="footer-page">
@@ -358,28 +369,28 @@
                                         <li class="icons-list-footer">
                                             <a class="social-networks footer-social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#instagram"></use>
+                                                    <use href="./images/svg/sprite.svg#instagram"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list-footer">
                                             <a class="social-networks footer-social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#twitter"></use>
+                                                    <use href="./images/svg/sprite.svg#twitter"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list-footer">
                                             <a class="social-networks footer-social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#facebook"></use>
+                                                    <use href="./images/svg/sprite.svg#facebook"></use>
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="icons-list">
                                             <a class="social-networks footer-social-networks" href="">
                                                 <svg class="connection-icons">
-                                                    <use href="./images/svg/social-networks.svg#linkedin"></use>
+                                                    <use href="./images/svg/sprite.svg#linkedin"></use>
                                                 </svg>
                                             </a>
                                         </li>
@@ -389,5 +400,17 @@
         </div>
         
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="icon-close" data-modal-close>
+                <svg width="11" height="11">
+                    <use href="./images/svg/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>

@@ -13,6 +13,14 @@
   box-sizing: border-box;
 }
 
+:hover,
+:focus {
+  transition-property: fill, background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
 body {
   color: var(--primary-text-color);
   background-color: #ffffff;
@@ -98,6 +106,22 @@ img {
   letter-spacing: 0.02em;
 }
 
+.item {
+  display: flex;
+  position: relative;
+}
+
+.current::after {
+  display: flex;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  bottom: 0;
+  border-radius: 2px;
+}
+
 .item:not(:last-child) {
   margin-right: 50px;
 }
@@ -114,6 +138,7 @@ img {
 .nav .link.current {
   color: var(--accent-color);
 }
+
 .nav .link:hover,
 .nav .link:focus {
   color: var(--accent-color);
@@ -121,10 +146,15 @@ img {
 
 .connection-icon {
   margin-right: 10px;
-  /* fill: var(--primary-text-color); */
 }
 
+.icon-list {
+  fill: var(--primary-text-color);
+}
+
+.icon-list:hover,
 .connection-item:hover,
+.icon-list:focus,
 .connection-item:focus {
   fill: var(--accent-color);
 }
@@ -224,6 +254,8 @@ img {
   height: 70px;
 }
 
+/* gadgets */
+
 .section-gadgets {
   text-align: center;
   padding-top: 0;
@@ -231,6 +263,36 @@ img {
 .gadgets-list {
   display: flex;
   justify-content: space-between;
+}
+
+.gadgets-item {
+  /* display: block; */
+  position: relative;
+}
+
+.gadgets::before {
+  display: flex;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+}
+
+.gadgets-text {
+  display: flex;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+
+  color: var(--white-text-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
 }
 
 /* --team-- */
@@ -306,9 +368,9 @@ img {
 }
 
 .social-networks:hover,
-.connection-icon:hover,
+.connection-icons:hover,
 .social-networks:focus,
-.connection-icon:focus {
+.connection-icons:focus {
   fill: var(--white-text-color);
   background-color: var(--accent-color);
 }
@@ -436,7 +498,6 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--white-text-color);
   border-radius: 50%;
-  /* margin-right: 10px; */
 }
 
 .icons-list-footer {
@@ -500,13 +561,48 @@ img {
 
 .portfolio-list {
   background-color: var(--white-text-color);
-
   width: calc((100% - 60) / 3);
-
   border-bottom: 1px solid #eeeeee;
 
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.portfolio-text {
+  position: relative;
+  overflow: hidden;
+  background: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio-list:hover .hidden-text {
+  transform: translatey(0);
+}
+
+.hidden-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px, 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(101%);
+  transition: transform 250ms ease;
+}
+
+.hidden-text > p {
+  position: absolute;
+  width: 322px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--white-text-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.56;
 }
 
 .portfolio-list:hover,
@@ -529,16 +625,48 @@ img {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
 }
-/* .portfolio-list:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-
-.portfolio-list:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
-} */
-
 .title-project {
   margin-bottom: 4px;
+}
+
+/* backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: var(--white-text-color);
+}
+
+.icon-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* #FFFFFF  -  колір білого тексту
